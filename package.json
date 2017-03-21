@@ -1,22 +1,23 @@
 {
-    "name": "restapi",
-    "version": "1.0.0",
-    "description": "REST API",
-    "main": "app.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/DevonHogencamp/RESTAPI.git"
-    },
-    "author": "Devon Hogencamp",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/DevonHogencamp/RESTAPI/issues"
-    },
-    "homepage": "https://github.com/DevonHogencamp/RESTAPI#readme",
-    "dependencies": {
-        "express": "^4.15.2"
-    }
+  "name": "restapi",
+  "version": "1.0.0",
+  "description": "REST API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevonHogencamp/RESTAPI.git"
+  },
+  "author": "Devon Hogencamp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevonHogencamp/RESTAPI/issues"
+  },
+  "homepage": "https://github.com/DevonHogencamp/RESTAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
 }
