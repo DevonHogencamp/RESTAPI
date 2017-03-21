@@ -19,9 +19,7 @@ router.get('/ninjas', function (req, res) {
 
 // Add a new ninja to the DB
 router.post('/ninjas', function (req, res) {
-    res.send({
-        type: 'POST'
-    });
+    res.send(req.body);
 });
 
 // Update a ninja in the DB
