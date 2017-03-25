@@ -4,13 +4,23 @@
 // Express
 const express = require('express');
 
-// Set up our express app
-const app = express();
+// Port for our app
+const port = 3000;
 
 // Body Parser
 const bodyParser = require('body-parser');
 
-const port = 3000;
+// Mongoose
+const mongoose = require('mongoose');
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost/ninjago');
+
+// Switch from deprecated Mongoose promise to ES6 promise
+mongoose.Promise = global.Promise;
+
+// Set up our express app
+const app = express();
 
 // Set up body parser for express
 app.use(bodyParser.json());
