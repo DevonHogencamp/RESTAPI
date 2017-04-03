@@ -28,6 +28,13 @@ app.use(bodyParser.json());
 // Make express use our routes with /api in front of our routes from routes/api.js
 app.use('/api', require('./routes/api'));
 
+// Error handling middleware
+app.use(function (err, req, res, next) {
+    res.status(422).send({
+        error: err.message
+    });
+});
+
 // Listen for reqs
 app.listen(port, function () {
     console.log('Server is up and running!');
