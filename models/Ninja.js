@@ -8,6 +8,18 @@ const mongoose = require('mongoose');
 // Mongoose Schema
 const Schema = mongoose.Schema;
 
+// Geo Schema
+const GeoSchema = new Schema({
+    type: {
+        type: String,
+        default: "Point"
+    },
+    coordinates: {
+        type: [Numbers],
+        index: "2dshpere"
+    }
+});
+
 /*
     Ninja Schema and Model
 */
@@ -24,8 +36,8 @@ const NinjaSchema = new Schema({
     available: {
         type: Boolean,
         default: false
-    }
-    // TODO Add in geo location
+    },
+    geometry: GeoSchema
 });
 
 // Ninja Model
