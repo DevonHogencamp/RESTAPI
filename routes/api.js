@@ -15,8 +15,17 @@ const Ninja = require('../models/Ninja');
 
 // Get a list of ninjas from the DB
 router.get('/ninjas', function (req, res, next) {
-    res.send({
-        type: 'GET'
+    Ninja.geoNear(
+        {
+            type: 'Point',
+            coordinates: [parseFloat(req.query.lng), parseFloat(req.query.lat)]
+        },
+        {
+            maxDistance: 100,
+            spherical: true
+        }
+    ).then(function (ninjas) {
+        res.send(ninjas);
     });
 });
 

@@ -15,7 +15,7 @@ const GeoSchema = new Schema({
         default: "Point"
     },
     coordinates: {
-        type: [Numbers],
+        type: [Number],
         index: "2dshpere"
     }
 });
