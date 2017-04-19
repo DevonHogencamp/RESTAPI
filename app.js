@@ -22,6 +22,9 @@ mongoose.Promise = global.Promise;
 // Set up our express app
 const app = express();
 
+// Directs statics files to public folder
+app.use(express.static('public'));
+
 // Set up body parser for express
 app.use(bodyParser.json());
 
